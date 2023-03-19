@@ -1,13 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import About from './pages/about';
+import Home from './pages/home';
+import Header from './components/header';
+import Footer from './components/footer';
+import { BrowserRouter as Router, Routes as Switch, Route, Link } from 'react-router-dom';
+import { ReactNotifications } from 'react-notifications-component';
+import 'react-notifications-component/dist/theme.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+document.title = "MY APP";
 root.render(
   <React.StrictMode>
-    <App />
+    <div>
+      <ReactNotifications />
+      <Header />
+      <Router>
+        <Switch>
+          <Route exact path='/' element={<Home />} />
+        </Switch>
+        <Switch>
+          <Route exact path='/about' element={<About />} />
+        </Switch>
+
+      </Router>
+      <Footer />
+    </div>
   </React.StrictMode>
 );
 
