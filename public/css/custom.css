@@ -1,83 +1,79 @@
-.home{
-    background: url('../img/background.jpg');
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    /* background-position: 85% 50% !important; */
+@import "./theme.css";
+
+.landingPageGirl {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
-.home-black{
-    background: url('../img/background-dark.png');
-    background-size: cover
+.infoCardBg {
+	height: auto;
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("../img/LandingPageGuy.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.infoCardWrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	margin: 7% 3% 0% 3%;
+	width: auto;
 }
 
-.home-domain{
-    border: 1px solid #efefef;
+.infoCard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.2);
+	margin: 10px 0;
+	min-height: 400px;
 }
 
-.home-domain:hover{
-    border: 1px solid #ddd;
-}
-.filter-list{
-    max-height: 160px;
-    overflow-y: auto;
-}
-.filter-list-item{
-    list-style: none;
-    text-transform: capitalize;
-    font-size: 14px;
-}
-
-
-@media (max-width: 61.9em) {
-    .home {
-        background-size: 80% !important;
-        background-position: 120% 105% !important;
-    }
+.orgid {
+	display: flex;
+	align-items: center;
+	height: 3.1rem;
+	border-left: 0.0625rem var(--dark) solid;
+	border-top: 0.0625rem var(--dark) solid;
+	border-bottom: 0.0625rem var(--dark) solid;
+	border-top-left-radius: 0.625rem !important;
+	border-bottom-left-radius: 0.625rem !important;
+	box-shadow: none;
+	letter-spacing: 0.08rem;
+	padding-left: 1.25rem;
+	padding-right: 1rem;
+	background-color: var(--dark);
+	color: var(--primary);
 }
 
-.leaflet-container {
-    width: 100%;
-    height: 70vh;
+#orgIdInput .input-error-label {
+	top: -28px !important;
 }
 
-.carousel .slide{
-        max-height: 90vh !important;
+/* reactflow overrides */
+
+.react-flow__pane {
+	cursor: default !important;
+}
+.react-flow__node {
+	cursor: default !important;
+}
+.react-flow__attribution {
+	display: none;
 }
 
-.carousel .slide img {
-    width: auto !important;
-    vertical-align: top;
-    border: 0;
-    max-height: 90vh !important;
+.addbuttonedge .addbuttonedge-button {
+	display: block;
+	width: 25px;
+	height: 25px;
 }
 
-.carousel .slide .legend{
-    opacity: 0.7 !important;
-}
-
-.slider{
-    display: block;
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top:0;
-    z-index: 2000;
-}
-
-.slider .closebtnrow{
-    display: flex;
-    justify-content: end;
-    z-index: 2001;
-}
-
-.carousel .control-dots {
-    z-index: 20000 !important;
-}
-
-.carousel.carousel-slider .control-arrow {
-    z-index: 20001 !important;
-}
-
-.react-datepicker-popper{
-    z-index: 1000 !important;
+.addbuttonedge:hover .addbuttonedge-button {
+	display: block;
 }
